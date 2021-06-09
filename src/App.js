@@ -1,9 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import reactDom from 'react-dom';
-import { render } from '@testing-library/react';
+import React from 'react'
 
-function App extends React.Component {
+class App extends React.Component {
+
+  componentDidMount() {
+    fetch('http://localhost:3000/api/v1/accounts')
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className="App">
