@@ -4,7 +4,7 @@ import {fetchAccounts} from './actions/fetchAccounts'
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.fetchAccounts
+    this.props.fetchAccounts({type: 'FETCH_ACCOUNTS', payload: {name: 'Checking'}})
   }
 
   render() {
