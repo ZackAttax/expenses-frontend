@@ -1,6 +1,11 @@
+//import { fetchAccounts } from "../actions/fetchAccounts";
 
 export default function accountReducer(state = {accounts: []}, action) {
-
-    return state
+    switch (action.type) {
+        case 'FETCH_ACCOUNTS':
+            return {accounts: action.payload}
+        default:
+            return state
+        }
 }
 
