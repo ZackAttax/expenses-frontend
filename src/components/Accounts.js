@@ -9,11 +9,10 @@ const Accounts = (props) => {
         <div>
             {props.accounts.map(account => 
             <div key={account.id}>
-                
+                <Account account={account} />
                 </div>
                 )
             }
-            <Route path='/account/:id' render={() => <Account account={account} />} />
         </div>
     );
 }
