@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {addAccount} from '../actions/addAccount'
 
 class AccountInput extends React.Component {
 state = {name: '', balance: ''}
@@ -9,9 +11,9 @@ handleChange = (event) => {
         [event.target.name]: event.target.value,
     });
 }
-handleSubmit = () => {
-    debugger
-    event.preventDefault
+handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addAccount(this.state)
 }
 
     render() {
@@ -28,4 +30,4 @@ handleSubmit = () => {
         )
     }
 }
-export default AccountInput
+export default connect(null, {addAccount})(AccountInput)
