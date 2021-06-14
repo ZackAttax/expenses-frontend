@@ -1,4 +1,6 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
+import Account from './Account'
 
 const Accounts = (props) => {
     
@@ -6,11 +8,12 @@ const Accounts = (props) => {
     return (
         <div>
             {props.accounts.map(account => 
-            <li key={account.id}>
-                {account.name} - {account.balance}
-                </li>
+            <div key={account.id}>
+                
+                </div>
                 )
             }
+            <Route path='/account/:id' render={() => <Account account={account} />} />
         </div>
     );
 }
