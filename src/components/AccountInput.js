@@ -6,7 +6,7 @@ class AccountInput extends React.Component {
 state = {name: '', balance: ''}
 
 handleChange = (event) => {
-    debugger
+    
     this.setState({
         [event.target.name]: event.target.value,
     });
@@ -14,6 +14,10 @@ handleChange = (event) => {
 handleSubmit = (event) => {
     event.preventDefault()
     this.props.addAccount(this.state)
+    this.setState({
+        name: "",
+        balance: ""
+    })
 }
 
     render() {
