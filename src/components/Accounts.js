@@ -1,6 +1,6 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Account from './Account'
+import { Link } from 'react-router-dom'
+//import Account from './Account'
 
 const Accounts = (props) => {
     

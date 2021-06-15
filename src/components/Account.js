@@ -1,13 +1,13 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+//import { Redirect } from 'react-router-dom'
 const Account = (props) => {
  
  let account = props.accounts.find(account => account.id == props.match.params.id)
 
     return (
-        <li>
+        <h3>
             {account ? account.name : null} - {account ? account.balance : null}
-        </li>
+        </h3>
     )
 }
 
