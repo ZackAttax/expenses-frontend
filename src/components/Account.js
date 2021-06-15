@@ -1,8 +1,8 @@
 import React from 'react'
-
+import { Redirect } from 'react-router-dom'
 const Account = (props) => {
-    console.log(props)
- let account = props.accounts[props.match.params.id - 1]
+ 
+ let account = props.accounts.find(account => account.id == props.match.params.id)
 
     return (
         <li>
