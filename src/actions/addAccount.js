@@ -11,6 +11,6 @@ export const addAccount = (data) => {
          })
          .then(resp => resp.json())
          .then(account => dispatch({type: 'ADD_ACCOUNT', payload: account}))
-
+         .catch(err => console.log(err))
     }
 }
