@@ -9,7 +9,7 @@ const Accounts = (props) => {
         <div>
             {props.accounts.map(account => 
                 <div key={account.id}>
-                <Link to={`/accounts/${account.id}`}>{account.name}</Link>
+                <Link className="accounts" to={`/accounts/${account.id}`}>{account.name}</Link>
                 </div>
                 )
             }
